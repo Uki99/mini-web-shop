@@ -1,0 +1,26 @@
+[
+  {
+    "id": 0,
+    "ime_kategorije": "Bela tehnika"
+  },
+  {
+    "id": 1,
+    "ime_kategorije": "TV i Video"
+  },
+  {
+    "id": 2,
+    "ime_kategorije": "Mali kućni aparati"
+  },
+  {
+    "id": 3,
+    "ime_kategorije": "Mobilni telefoni"
+  },
+  {
+    "id": 4,
+    "ime_kategorije": "Auto tehnika"
+  },
+  {
+    "id": 5,
+    "ime_kategorije": "Klime"
+  }
+]

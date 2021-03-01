@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Uglješa Ćirić uclogout@gmail.com">
+    <title>Admin Panel</title>
+
+    <!-- Moj CSS -->
+    <link rel="stylesheet" href="css/adminPanel.css">
+
+    <!-- jQuery import -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+<!-- Ceo sadržaj stranice ide unutar ovog section-a -->
+    <section class="stranica">
+        <!-- Navbar -->
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/logout">Logout</a></li>
+            <li><a href="/adminPanel">Admin Panel</a></li>
+        </ul>
+
+        <!-- Poruka o izmenama i brisanjima -->
+        {{#if poruka}}
+            {{{poruka}}}
+        {{/if}}
+
+        <button type="button" class="dodajDugme" style="margin-left: 5%;" data-radnja="dodaj" onclick="proizvodForma(this)">Dodaj proizvod</button>
+        <button type="button" class="dodajDugme" data-radnja="dodaj" onclick="kategorijaForma(this)">Dodaj kategoriju</button>
+
+        <h2 style="text-align: center">Proizvodi</h2>
+        <hr style="width: 90%; margin-bottom: 30px;">
+
+        <!-- Tabela proizvodi - polja sa nazivom -->
+        <div class="itemContainer" style="line-height:40px;height:40px">
+            <div class="meta" style="font-weight: 900;">Naziv</div>
+            <div class="meta" style="font-weight: 900;">Cena</div>
+            <div class="meta" style="font-weight: 900;">Slika</div>
+            <div class="meta" style="font-weight: 900;">Kategorija</div>
+            <div class="meta" style="font-weight: 900;">Opcije</div>
+        </div>
+
+
+        <!-- Svaki proizvod prikaz -->
+        {{#if proizvodi}}
+            {{#each proizvodi}}
+                <div class="itemContainer">
+                    <div class="meta">{{this.naziv}}</div>
+                    <div class="meta" style="line-height: 60px;">{{this.cena}} RSD</div>
+                    <div class="meta" style="line-height: 60px;"><img src="images/{{this.slika}}" alt="{{this.slika}}" class="slika_proizvoda"></div>
+                    <div class="meta" style="line-height: 60px;">{{this.kategorija}}</div>
+                    <div class="meta" style="overflow-y: auto;">
+                        <a href="#" data-id="{{this.id}}" data-radnja="izmeni" onclick="proizvodForma(this)">Izmeni</a>
+                        <a href="/izbrisiProizvod/{{this.id}}" onclick="return confirm('Da li ste sigurni da želite da izbrišete ovaj proizvod?')">Izbriši</a>
+                    </div>
+                </div>
+            {{/each}}
+        {{/if}}
+
+        <h2 style="text-align: center; margin-top: 60px;">Kategorije</h2>
+        <hr style="width: 90%; margin-bottom: 30px;">
+
+        <!-- Tabela kategorije - polja sa nazivom -->
+        <div class="itemContainer">
+            <div class="meta" style="font-weight: 900;line-height: 50px; margin-left: 20%;">ID kategorije</div>
+            <div class="meta" style="font-weight: 900;line-height: 50px;">Ime kategorije</div>
+            <div class="meta" style="font-weight: 900;line-height: 50px;">Opcije</div>
+        </div>
+
+        <!-- Svaka kategorija prikaz -->
+        <div class="itemContainer">
+            {{#if kategorije}}
+                {{#each kategorije}}
+                    <div class="meta" style="line-height: 50px; margin-left: 20%;">{{this.id}}</div>
+                    <div class="meta" style="line-height: 50px;">{{this.ime_kategorije}}</div>
+                    <div class="meta" style="overflow-y: auto;">
+                        <a href="#" data-id="{{this.id}}" data-radnja="izmeni" onclick="kategorijaForma(this)">Izmeni</a>
+                        <a href="/izbrisiKategoriju/{{this.id}}" onclick="return confirm('Da li ste sigurni da želite da izbrišete ovu kategoriju?')">Izbriši</a>
+                    </div>
+                {{/each}}
+            {{/if}}
+        </div>
+
+        <!-- Jedna forma za izmenu i dodavanje novih proizvoda koja se puni na osnovu radnje pomoću JS -->
+        <div class="dim" id="proizvodi_forma">
+            <form method="POST" class="izmenaForm" id="proizvodiForma" enctype="multipart/form-data">
+                <h3 style="color: white" id="forma_proizvod_naslov"></h3>
+
+                <label for="naziv">Unesite naziv proizvoda</label>
+                <input type="text" name="naziv" id="naziv" style="width: 400px;" required>
+
+                <br><br>
+
+                <label for="cena">Unesite cenu proizvoda</label>
+                <input type="number" name="cena" id="cena" required>
+
+                <br><br>
+
+                <label for="slika">Odaberite sliku sa Vašeg računara</label>
+                <input type="file" name="slika" id="slika" accept=".png, .jpg">
+
+                <br><br>
+
+                <label for="opis">Unesite opis proizvoda</label>
+                <textarea name="opis" id="opis" style="width: 450px; height: 125px" required></textarea>
+
+                <br><br>
+
+                <label for="kategorija">Unesite kategoriju proizvoda</label>
+                <select name="kategorija" id="kategorija">
+                    {{#if kategorije}}
+                        {{#each kategorije}}
+                            <option value="{{this.id}}">{{this.ime_kategorije}}</option>
+                        {{/each}}
+                    {{/if}}
+                </select>
+
+                <br><br>
+                <button id="forma_proizvod_dugme"></button>
+            </form>
+
+            <img id="x_dugme_proizvod" src="images/x_dugme.png" alt="zatvori" class="x_dugme">
+        </div>
+
+        <!-- Jedna forma za izmenu i dodavanje novih kategorija koja se puni na osnovu radnje pomoću JS -->
+        <div class="dim" id="kategorije_forma">
+            <form action="#" method="POST" class="izmenaForm" id="kategorijeForma">
+                <h3 style="color: white" id="forma_kategorija_naslov"></h3>
+
+                <label for="nazivk" id="labelak"></label>
+                <input type="text" name="nazivk" id="nazivk" style="width: 400px;" required>
+
+                <br><br>
+
+                <button id="forma_kategorija_dugme"></button>
+            </form>
+
+            <img id="x_dugme_kategorija" src="images/x_dugme.png" alt="zatvori" class="x_dugme">
+        </div>
+
+        <br><br>
+
+    </section>
+
+    <!-- Moj futer -->
+    <footer>
+        Copyright © 2021 by Ćirić Uglješa
+    </footer>
+
+    <!-- Moja skripta -->
+    <script src="js/adminPanel.js"></script>
+
+</body>
+</html>

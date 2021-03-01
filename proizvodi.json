@@ -1,0 +1,162 @@
+[
+  {
+    "id": 0,
+    "naziv": "Gorenje Mašina za pranje veša WEI84SDS",
+    "cena": 39999.0,
+    "slika": "157131.png",
+    "opis": "Odlična stabilna mašina kapaciteta punjenja od 8 kg sa 16 programa\r\nFunkcije AllergySteam i AllergyCare uklanjaju neprijatne alergene sa odeće i štite najosetljiviju kožu\r\nInverter PowerDrive motor bez četkica\r\nA+++ klasa energetske efikasnosti",
+    "id_kategorije": 0
+  },
+  {
+    "id": 1,
+    "naziv": "GORENJE Frižider sa jednim vratima R 6192 LX, Samootapajući",
+    "cena": 57990.0,
+    "slika": "79295.png",
+    "opis": "Energetska klasa: A++\r\nKapacitet frižidera: 368 l\r\nDimenzije (ŠxVxD): 60 × 185 × 64 cm\r\nLED osvetljenje na plafonu\r\nKlimatski razredi: SN, N, ST, T",
+    "id_kategorije": 0
+  },
+  {
+    "id": 2,
+    "naziv": "VOX Mašina za pranje veša WM1075 YTQ",
+    "cena": 26990.0,
+    "slika": "155029.png",
+    "opis": "Mašina za pranje veša visokog kvaliteta A+++ energetske klase\nPoseduje odličan program za zaštitu od alergija\nGodišnja potrošnja električne energije do 172 kWh\nSistem za kontrolu debalansa\nKapacitet pranja do 7 kg",
+    "id_kategorije": 0
+  },
+  {
+    "id": 3,
+    "naziv": "BEKO Horizontalni zamrzivač HSA 47520",
+    "cena": 41499.0,
+    "slika": "82005.png",
+    "opis": "Horizontalni zamrzivač\nEnergetska klasa: A+\nZapremina: 467l\nUpravljanje : Mehaničko\nTehnologija hlađenja: Klasično\nAntibakterijska guma",
+    "id_kategorije": 0
+  },
+  {
+    "id": 4,
+    "naziv": "LIEBHERR Horizontalni zamrzivač GT 4232, SmartFrost",
+    "cena": 58990.0,
+    "slika": "68117.png",
+    "opis": "SmartFrost\nEnergetska klasa: A++\nZapremina: 380 l\nKapacitet zamrzavanja: 29 kg/24h\nVreme čuvanja namirnica u slučaju smetnji: 72h\nBoja: Bela",
+    "id_kategorije": 0
+  },
+  {
+    "id": 5,
+    "naziv": "BEKO Električni šporet FSM 57300 GX, Multifunkcionalna rerna",
+    "cena": 40999.0,
+    "slika": "127257.png",
+    "opis": "Energetska klasa: A\nElektrični šporet sa staklokeramičkom pločom\nZapremina rerne: 55 l\nDimenzije: (ŠxVxD) 50x85x60 cm\bElektrični gril\n7 funkcija pečenja",
+    "id_kategorije": 0
+  },
+  {
+    "id": 6,
+    "naziv": "ALFA PLAM Električni šporet S 140 55 33, Konvencionalna rerna",
+    "cena": 23790.0,
+    "slika": "43042.png",
+    "opis": "Električni šporet sa 4 ringle, od čega 1 ekspres\nZapremina rerne: 70 l\nDimenzije: (ŠxVxD) 55 x 85 x 60 cm\nUkupna snaga 8025 kW\n6 načina delovanja rerne",
+    "id_kategorije": 0
+  },
+  {
+    "id": 7,
+    "naziv": "LG Smart televizor 50UN74003LB",
+    "cena": 69990.0,
+    "slika": "154059.png",
+    "opis": "Pametni UHD televizor podiže kvalitet slike i zvuka na viši nivo\nSjajan webOS Smart TV operativni sistem omogućava jednostavno rukovanje\nUltra Surround zvuk sa snagom zvučnika od 20 W\nDizajn tankog okvira pruža pravi bioskopski užitak",
+    "id_kategorije": 1
+  },
+  {
+    "id": 8,
+    "naziv": "Samsung Smart televizor 50\" QE50Q65TAUXXH",
+    "cena": 84899.0,
+    "slika": "151394.png",
+    "opis": "eličina ekrana od 50\" elegantnog dizajna bez ivica na 3 strane\nDual LED pozadinsko osvetljenje za pravu boju u svakoj sceni\nQuantum Dot tehnologija pretvara svetlost u zadivljujuće boje\nJednostavno uklapanje televizora uz ambijentalni režim",
+    "id_kategorije": 1
+  },
+  {
+    "id": 9,
+    "naziv": "Philips Pegla GC3925/30",
+    "cena": 9490.0,
+    "slika": "127586.png",
+    "opis": "Brzo zagrevanje zahvaljujući snazi od 2500 W\nOptimalTEMP - peglanje bez podešavanje temperature za sve vrste odeće\nBezbedna za svu odeću koja se može peglati, bez progorevanja\nGrejna ploča za nenadmašne performanse klizanja po tkanini",
+    "id_kategorije": 2
+  },
+  {
+    "id": 10,
+    "naziv": "VOX Pegla DBL-5025",
+    "cena": 2090.0,
+    "slika": "77328.png",
+    "opis": "Pegla na paru\nSnaga 2200W\nSistem protiv kapanja\nSamočišćenje\nBoja crvena",
+    "id_kategorije": 2
+  },
+  {
+    "id": 11,
+    "naziv": "Samsung Galaxy S20 Ultra - Kosmičko sivi",
+    "cena": 144990.0,
+    "slika": "150498.png",
+    "opis": "Infinity-O displej od 6,9\", Gorilla Glass 6\nSnimanje 8K video zapisa\nVišestruka kamera visokog kvaliteta\nLitijum-polimerska baterija od 5000 mAh",
+    "id_kategorije": 3
+  },
+  {
+    "id": 12,
+    "naziv": "iPhone 11 - 64 GB - Yellow",
+    "cena": 110190.0,
+    "slika": "142736.png",
+    "opis": "Ekran: 6,1\"\nMemorija: 64 GB\nKamera: 12 MP + 12 MP / 12 MP\nOperativni sistem: iOS 13\nRezolucija: 1792 x 828 px",
+    "id_kategorije": 3
+  },
+  {
+    "id": 13,
+    "naziv": "iPhone 11 Pro Max - 64 GB - Space Gray",
+    "cena": 157290.0,
+    "slika": "142721.png",
+    "opis": "Ekran: 6,5\"\nMemorija: 64 GB\nKamera: 12 MP + 12 MP + 12 MP / 12 MP\nOperativni sistem: iOS 13\nRezolucija: 2688 x 1242 px",
+    "id_kategorije": 3
+  },
+  {
+    "id": 14,
+    "naziv": "TIGAR Zimska auto guma 195/65 R15 WIN 91H",
+    "cena": 4790.0,
+    "slika": "133500.png",
+    "opis": "Širina gume 195 mm\nVisina gume 65\nPrečnik gume 15\"\nIndeks brzine H (210 km/h)\nIndeks nosivosti 91/615 kg",
+    "id_kategorije": 4
+  },
+  {
+    "id": 15,
+    "naziv": "Viking Zimska guma 195/65 R15 91T Wintech",
+    "cena": 4790.0,
+    "slika": "134598.png",
+    "opis": "Širina gume: 195 mm\nVisina gume: 65%\nPrečnik gume: 15\"",
+    "id_kategorije": 4
+  },
+  {
+    "id": 16,
+    "naziv": "S Box kabl HDMI 1 4V M DP 2m",
+    "cena": 1699.0,
+    "slika": "76654.png",
+    "opis": "Vrlo visoka čistoća materijala\n100% izolovanost svakog voda\n30AWG, OD6.0MM, BLK PVC, muški/muški\nSpoljašnji prečnik 7.5 mm\n24K pozlaćeni konektori\nMinimalna interferencija",
+    "id_kategorije": 1
+  },
+  {
+    "id": 17,
+    "naziv": "ANTENALL Sobna antena DT-101",
+    "cena": 1490.0,
+    "slika": "129346.png",
+    "opis": "Frekvencijski domet 47-860 MHz\nSignal 0-26dB\nImpendansa 75Ω\nDomet stalnog zvuka ≤1.5\nNapajanje DC12V ili AC220V",
+    "id_kategorije": 1
+  },
+  {
+    "id": 18,
+    "naziv": "Hisense Standardna klima Expert Classic A 12K - 3600 W",
+    "cena": 29990.0,
+    "slika": "152549.png",
+    "opis": "Tehnologija motora: On/Off\nGas: R410A\nKapacitet hlađenja: 12000 BTU\nI Feel –senzor za kontrolu temperature\nGarantni rok: Zakonska saobraznost",
+    "id_kategorije": 5
+  },
+  {
+    "id": 19,
+    "naziv": "VIVAX Standardna klima ACP 12CH35AEV",
+    "cena": 22777.0,
+    "slika": "131639.png",
+    "opis": "Tehnologija motora: On/Off\nGas: R410A\nKapacitet hlađenja: 12000 BTU\nWi-Fi: Ne\nGarancija: Zakonska saobraznost",
+    "id_kategorije": 5
+  }
+]

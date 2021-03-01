@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Uglješa Ćirić uclogout@gmail.com">
+    <title>IP projekat RT-8/18</title>
+
+    <!-- Moj CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- jQuery import -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+
+<!-- Ceo sadržaj stranice ide unutar ovog section-a -->
+<section class="stranica">
+    <!-- Navbar -->
+    <ul>
+        <li><a href="/">Home</a></li>
+        {{#if admin}}
+            <li><a href="/logout">Logout</a></li>
+            <li><a href="/adminPanel">Admin Panel</a></li>
+        {{else}}
+            <li><a href="#" id="login">Log In</a></li>
+        {{/if}}
+    </ul>
+
+    <br>
+
+    <!-- Pretraga -->
+    <div style="text-align: center">
+        <input type="text" placeholder="Pretraži" id="pretraga" class="pretraga" required>
+    </div>
+
+
+    <!-- Naslov Proizvodi i filteri za primenu -->
+    <div class="naslov_filteri">
+        <h1>Proizvodi</h1>
+
+        <select id="sortiranje">
+            <option value="" disabled selected>Sortiraj po</option>
+            <option value="cena_rastuce">Ceni rastuće</option>
+            <option value="cena_opadajuce">Ceni opadajuće</option>
+            <option value="naziv_rastuce">Naziv rastuće</option>
+            <option value="naziv_opadajuce">Naziv opadajuće</option>
+        </select>
+    </div>
+
+    <hr style="width: 90%; margin-left: 5%; margin-top: 20px;">
+
+    <!-- Prikaz svih proizvoda -->
+    <div class="proizvodi" id="proizvodi">
+        {{#if proizvodi}}
+            {{#each proizvodi}}
+                <div class="mojProizvod">
+                    <img src="images/{{this.slika}}" alt="proizvod" style="width: 150px; height: 150px;">
+                    <h4>{{this.naziv}}</h4>
+                    <p>Kategorija: {{this.kategorija}}</p>
+                    <h3>{{this.cena}} RSD</h3>
+                </div>
+            {{/each}}
+        {{/if}}
+    </div>
+
+    <!-- Login forma koja se pojavljuje -->
+    <div class="dim" id="dim">
+        <form action="/login" method="POST" class="loginForm">
+            <h3 style="color: white">Admin Login</h3>
+
+            <input type="text" placeholder="unesite korisničko ime" name="korisnicko_ime" required>
+            <br><br>
+            <input type="password" placeholder="unesite šifru" name="lozinka" required>
+            <br><br>
+            <button>Log in</button>
+        </form>
+
+        <img id="x_dugme" src="images/x_dugme.png" alt="zatvori" class="x_dugme">
+
+    </div>
+</section>
+
+<!-- Moj futer -->
+<footer>
+    Copyright © 2021 by Ćirić Uglješa
+</footer>
+
+<!-- Moja skripta -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
